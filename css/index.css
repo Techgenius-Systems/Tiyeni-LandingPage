@@ -1,0 +1,651 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+:root{
+
+    --bg-color: #fff;
+
+    --btn-color: #fdfdfd;/* button color*/
+    --btn-bg: #000;/* button bg color*/
+
+    --primary-text-color: #000;
+    --header-link-hover: #000;
+    --input-hover-bd-color: #000;
+}
+
+/* Ensure images in Safari maintain aspect ratio */
+header {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    justify-content: space-between; /* Distribute space evenly */
+    flex-wrap: nowrap; /* Prevent items from breaking */
+    padding: 10px 5%;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    flex-shrink: 0;
+}
+#logo-container {
+    box-sizing: border-box;
+    width: 90px; /* Explicit width */
+}
+
+.download-btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+    gap: 20px;
+    text-align: center;
+    color: red;
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px; /* Adjust padding */
+    min-width: 120px; /* Ensures button doesn't shrink */
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: rgba(206, 42, 42, 0.582);
+    color: rgb(255, 255, 255);
+}
+
+#hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-container {
+    height: 70px; /* Adjust height */
+    width: 120px;  /* Adjust width */
+}
+
+.logo-img {
+    max-width: 120px;
+    max-height: 70px;
+    object-fit: contain;
+}
+
+
+a {
+    margin: 0 auto; /* Center the link */
+}
+@media not all and (min-resolution: 0.001dpcm) and (min-color-index: 0) {
+    a {
+        margin-left: 0 !important;
+        justify-content: center !important;
+    }
+}
+
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 200vh; /* Adds enough space to scroll */
+}
+
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Ubuntu", sans-serif;
+}
+
+header {
+    position: sticky; /* Makes header stick */
+    top: 0; /* Sticks it at the top */
+    background-color: rgba(225, 43, 43, 0.8); /* Keeps the background */
+    color: #fffafa;
+    z-index: 9999; /* Ensures it's above other elements */
+    width: 100%; /* Spans full width */
+    padding: 10px 0; /* Adds some spacing */
+}
+
+
+header > .collapsible-header{
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    background-color: inherit;
+    place-content: center;
+    overflow: visible;
+    transition: width 0.3s ease;
+}
+
+.animated-collapse{
+    transition: width 0.3s ease;
+}
+
+
+.header-links {
+    display: flex;
+    align-items: center;
+    min-width: fit-content;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#backchange {
+    background: linear-gradient(90deg, white 0%, #ff00007a 100%);
+    background-size: 200% 100%; /* Double width for animation */
+    background-position: 100% 0%; /* Start from right */
+    transition: background-position 0.3s ease;
+}
+
+#hero-section{
+    background: linear-gradient(90deg, white 0%, #ff00007a 100%);
+    background-size: 200% 100%; /* Double width for animation */
+    background-position: 100% 0%; /* Start from right */
+    transition: background-position 0.3s ease;
+}
+
+.header-links:hover {
+    color: hsl(0, 100%, 50%);
+    /* background-color: var(--header-link-hover); */
+}
+
+.primary-text-color{
+    color: var(--primary-text-color);
+}
+
+
+.signup-img-section{
+    background-image: url("../assets/images/home/darkbg.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+
+.edge-gradient{
+    background: rgb(28, 28, 28);
+    background: linear-gradient(83deg, #ffffff 0%, #ffffff00 20%, #ffffff00 80%, rgb(255, 255, 255) 100%);
+}
+
+.scroller{
+    /* width: max-content;
+    flex-wrap: nowrap; */
+    animation: scroll 40s forwards linear infinite;
+  }
+  
+  .scroller[data-direction="right"] {
+      animation-direction: reverse;
+  }
+  
+  .scroller[data-direction="left"] {
+      animation-direction: forwards;
+  }
+  
+  .scroller[data-direction="left"] {
+      animation-direction: forwards;
+  }
+  
+  .scroller[data-speed="fast"]{
+      animation-duration: 30s;
+  }
+  
+  .scroller[data-speed="slow"]{
+      animation-duration: 80s;
+  }
+
+.opacity-0{
+    opacity: 0 !important;
+}
+
+.opacity-100{
+    opacity: 100 !important;
+}
+
+.btn{
+    padding: 10px 15px;
+    width: max-content;
+    border-radius: 5px;
+    color: var(--btn-color);
+    background-color: var(--btn-bg);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.btn:hover{
+
+}
+
+.btn:disabled{
+    cursor: default;
+}
+
+.input{
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    /* outline: none; */
+    min-width: 100px;
+    border: 1px solid #818080;
+    /* transition: border 0.3s; */
+}
+
+.input:active, .input:focus, .input:focus-within{
+    border: 1px solid var(--input-hover-bd-color) !important;
+}
+
+.carousel-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 800px;
+}
+  
+.carousel {
+    display: inline-block;
+    animation: scroll 10s linear infinite;
+}
+  
+.carousel-img {
+    display: inline-block;
+    margin: 0 20px;
+}
+  
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+footer{
+    background-color: #000000;
+    color: #f2e7e7;
+}
+.footer-link{
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.footer-link:hover{
+    color: #ff0000;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    z-index: 10;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0px;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Style for the collapsible content such as faq commonly known as: accordion */
+
+.faq{
+    background-color: #fff;
+    color: #000000;
+    border: 1px solid #000;
+}
+
+.faq-accordion {
+    background-color: inherit;
+    color: #000000;
+    cursor: pointer;
+    padding: 15px 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition: height 0.4s;
+}
+
+.faq .content {
+    padding: 0px 18px;
+    color: #232323;
+    height: max-content;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: justify;
+    max-height: 0px;
+    transition: max-height 0.4s, padding 0.4s;
+}
+
+.faq-accordion .active,
+.faq-accordion:hover {
+    /* background-color: #2e2c2c; */
+}
+
+@media not all and (min-width: 1024px) {
+    header .collapsible-header {
+        position: fixed;
+        right: 0px;
+        flex-direction: column;
+        opacity: 0;
+        height: 100vh;
+        min-height: 100vh;
+        height: 100dvh;
+        width: 0vw;
+        justify-content: space-between;
+        padding: 5px;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        place-items: end;
+        background-color: #040404;
+        color: #ffffff;
+        overflow-y: auto;
+        box-shadow: 3px 0px 3px 2px #9f9f9f;
+    }
+
+    .header-links{
+        color: rgb(255, 255, 255);
+    }
+    
+}
+
+/* Style for the dialogue box */
+.dialog {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px); /* Adds a blur effect to the background */
+}
+
+.dialog-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    animation: slideIn 0.3s ease-out; /* Animation for opening the dialog */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.close:hover {
+    color: #000; /* Darker color on hover */
+}
+
+/* Button styling */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+/* Article Card Hover Effect */
+.tw-cursor-pointer:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Article Dialog Box Styles */
+.article-dialog {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.article-dialog-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 95%; /* Full width on mobile */
+    max-width: 800px; /* Wider on laptops */
+    max-height: 90vh; /* Maximum height for mobile devices */
+    overflow: hidden; /* Hide overflow for the container */
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Scrollable Content */
+.article-dialog-scrollable {
+    max-height: calc(90vh - 60px); /* Adjust for padding and close button */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 10px; /* Add space for scrollbar */
+}
+
+/* Close Button */
+.article-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s ease;
+}
+
+.article-close:hover {
+    color: #000;
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .article-dialog-content {
+        width: 100%; /* Full width on mobile */
+        height: 100vh; /* Full height on mobile */
+        max-height: 100vh; /* Full height on mobile */
+        border-radius: 0; /* Remove border radius for full-screen effect */
+    }
+
+    .article-dialog-scrollable {
+        max-height: calc(100vh - 60px); /* Adjust for smaller screens */
+    }
+}
+
+/* Laptop Optimization */
+@media (min-width: 769px) {
+    .article-dialog-content {
+        width: 60%; /* At least 60% of the screen on laptops */
+        max-width: 800px; /* Maximum width for larger screens */
+    }
+}
+/* Article Dialog Box Styles */
+.article-dialog {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px); /* Stronger blur effect */
+}
+
+.article-dialog-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 95%; /* Full width on mobile */
+    max-width: 800px; /* Wider on laptops */
+    max-height: 90vh; /* Maximum height for mobile devices */
+    overflow: hidden; /* Hide overflow for the container */
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    animation: slideIn 0.4s ease-out;
+}
+
+/* Scrollable Content */
+.article-dialog-scrollable {
+    max-height: calc(90vh - 80px); /* Adjust for padding and close button */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 10px; /* Add space for scrollbar */
+}
+
+/* Close Button */
+.article-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.article-close:hover {
+    color: #000;
+    transform: scale(1.1); /* Slight scale effect on hover */
+}
+
+/* Title */
+.article-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Image */
+.article-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Text */
+.article-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .article-dialog-content {
+        width: 100%; /* Full width on mobile */
+        height: 100vh; /* Full height on mobile */
+        max-height: 100vh; /* Full height on mobile */
+        border-radius: 0; /* Remove border radius for full-screen effect */
+        padding: 20px;
+    }
+
+    .article-dialog-scrollable {
+        max-height: calc(100vh - 80px); /* Adjust for smaller screens */
+    }
+
+    .article-title {
+        font-size: 1.8rem;
+    }
+
+    .article-text {
+        font-size: 1rem;
+    }
+}
+
+/* Laptop Optimization */
+@media (min-width: 769px) {
+    .article-dialog-content {
+        width: 60%; /* At least 60% of the screen on laptops */
+        max-width: 800px; /* Maximum width for larger screens */
+    }
+}
