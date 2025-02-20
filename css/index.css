@@ -28,6 +28,7 @@ a {
     justify-content: center; /* Center horizontally */
     flex-shrink: 0;
 }
+
 #logo-container {
     box-sizing: border-box;
     width: 90px; /* Explicit width */
@@ -65,8 +66,9 @@ a {
 #hero-section {
     display: flex;
     align-items: center;
-    justify-content: center;
+
 }
+
 .logo-container {
     height: 70px; /* Adjust height */
     width: 120px;  /* Adjust width */
@@ -86,24 +88,6 @@ a {
     a {
         margin-left: 0 !important;
         justify-content: center !important;
-    }
-}
-
-.tw-object-contain {
-    object-fit: contain;
-    object-position: center; /* Make sure it centers properly */
-}
-
-.collapsible-header {
-    flex-grow: 1; /* Take up remaining space */
-    display: flex;
-    justify-content: center;
-}
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center; /* Center items on mobile */
     }
 }
 
@@ -145,6 +129,55 @@ header > .collapsible-header{
 
 .animated-collapse{
     transition: width 0.3s ease;
+}
+
+  
+  .collapse-header-items.active {
+    width: 60vw;
+    opacity: 1;
+  }
+  
+.collapsible-header {
+    flex-grow: 1; /* Take up remaining space */
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center; /* Center items on mobile */
+        justify-content: right;
+    }
+    .logo-container {
+        margin: -1vh auto;
+    }
+    .collapsed-header-items {
+        width: 100%;
+        text-align: right;
+        padding-right: 20px; /* Adjust as needed */
+    }
+    #collapsed-header-items {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* Align menu items to the right */
+    }
+    
+    #collapsed-header-items div:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* Ensure the links align right */
+    }
+    #collapsed-header-items {
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+    }
+    #collapsed-header-items.open {
+        max-height: 500px; /* Adjust this value to the max height of your menu */
+        opacity: 1;
+    }        
 }
 
 
