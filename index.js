@@ -88,11 +88,6 @@ gsap.fromTo(".slide-in", {
 })
 
 const images = [
-    "tiyeninew/WhatsApp Image 2025-02-04 at 16.09.51.jpeg",
-    "tiyeninew/WhatsApp Image 2025-02-04 at 16.09.53.jpeg",
-    "assets/images/home/hiking4.jpg",
-    "tiyeninew/WhatsApp Image 2025-02-04 at 16.09.55 (1).jpeg",
-    "Tiyeni/Screenshot 2025-02-03 at 2.12.59 PM.png"
 ]
 
 function addSlideShowImages(img) {
@@ -306,4 +301,27 @@ window.addEventListener('scroll', () => {
     // Animate from right (100%) to left (0%)
     section.style.backgroundPosition = `${100 - scrollPercent}% 0%`; // Adjust both X and Y position
 });
+
+
+// JavaScript to cycle through slides every 3 seconds
+let slideIndex = 0;
+const slides = document.getElementsByClassName("slide");
+
+function showSlides() {
+    // Hide all slides
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; // Hide all slides
+    }
+    // Increase index, reset if necessary
+    slideIndex++;
+    if (slideIndex >= slides.length) { slideIndex = 0; }
+    // Display the current slide
+    slides[slideIndex].style.display = "block";
+    
+    // Change slide every 3 seconds
+    setTimeout(showSlides, 3000);
+}
+
+// Start the slideshow
+showSlides();
 
