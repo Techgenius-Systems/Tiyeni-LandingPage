@@ -424,7 +424,7 @@ header > .collapsible-header{
 .carousel {
     display: flex;
     width: max-content; /* Ensure the carousel can extend indefinitely */
-    animation: scroll 20s linear infinite;
+    animation: scroll 25s linear infinite;
 }
   
 .carousel-img {
@@ -432,6 +432,8 @@ header > .collapsible-header{
     margin: 0 20px;
     text-decoration: dashed;
     color: rgb(95, 94, 94);
+    padding-left: 3vh;
+    padding-right: 3vh;
 }
   
 .carousel-wrapper {
