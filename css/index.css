@@ -21,11 +21,6 @@ header {
     padding: 10px 5%;
     
 }
-header {
-    width: 100%;
-    border: none;
-}
-
 
 a {
     display: flex;
@@ -36,7 +31,6 @@ a {
 
 #logo-container {
     box-sizing: border-box;
-    width: 90px; /* Explicit width */
 }
 
 .download-btn-container {
@@ -124,13 +118,13 @@ a {
   
 
 .logo-container {
-    height: 70px; /* Adjust height */
-    width: 120px;  /* Adjust width */
+    height: 150px; /* Adjust height */
+    width: 170px;  /* Adjust width */
 }
 
 .logo-img {
-    max-width: 120px;
-    max-height: 70px;
+    max-width: 170px;
+    max-height: 90px;
     object-fit: contain;
 }
 
