@@ -322,6 +322,41 @@ function showSlides() {
     setTimeout(showSlides, 3000);
 }
 
-// Start the slideshow
-showSlides();
+function createAsh() {
+    const ash = document.createElement("div");
+    ash.classList.add("ash");
+
+    // Random position anywhere in the upper portion of the screen
+    ash.style.top = Math.random() * window.innerHeight * 0.7 + "px"; // 0 - 70% height
+
+    // Random horizontal start position
+    ash.style.left = Math.random() * window.innerWidth + "px";
+
+    // Random size for variation
+    const size = Math.random() * 8 + 4; // Between 4px and 12px
+    ash.style.width = `${size}px`;
+    ash.style.height = `${size}px`;
+
+    // Random animation direction (left or right)
+    const fromLeft = Math.random() > 0.5;
+    if (fromLeft) {
+        ash.classList.add("ash-left");
+    } else {
+        ash.classList.add("ash-right");
+    }
+
+    // Append to the rain container
+    document.getElementById("rain-container").appendChild(ash);
+
+    // Remove after animation completes
+    setTimeout(() => {
+        ash.remove();
+    }, 7000);
+}
+
+// Increase frequency to create a denser effect
+setInterval(createAsh, 700);
+
+
+
 
