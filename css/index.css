@@ -19,7 +19,13 @@ header {
     justify-content: space-between; /* Distribute space evenly */
     flex-wrap: nowrap; /* Prevent items from breaking */
     padding: 10px 5%;
+    
 }
+header {
+    width: 100%;
+    border: none;
+}
+
 
 a {
     display: flex;
@@ -65,7 +71,7 @@ a {
 #hero-section {
     display: flex;
     align-items: center;
-
+    
 }
 
 
