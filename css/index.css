@@ -910,3 +910,19 @@ svg {
         opacity: 0.9;
     }
 }
+.payment-logos {
+    display: flex;
+
+    gap: 15px; /* Space between icons */
+    margin-top: 10px;
+}
+
+.payment-logos i {
+    font-size: 36px; /* Adjust icon size */
+    color: #333; /* Default color */
+}
+
+/* Hover effect */
+.payment-logos i:hover {
+    color: #ff2a00; /* Change color on hover */
+}
