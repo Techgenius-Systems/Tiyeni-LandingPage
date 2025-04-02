@@ -141,19 +141,22 @@
                         </div>
                     </div>
 
-                    <div class="reveal-up tw-max-w-[750px]  tw-max-h-[100vh] tw-w-full tw-flex tw-place-content-center tw-overflow-hidden">
-                        <div class="tw-relative tw-max-w-[450px] slide-in tw-flex tw-place-content-center">
-                            <div class="tw-overflow-hidden">
+                    <div class="reveal-up tw-max-w-[750px] tw-max-h-[100vh] tw-w-full tw-flex tw-place-content-center">
+                        <div class="tw-relative tw-max-w-[500px] slide-in tw-flex tw-place-content-center">
+                            <!-- Wrapper without overflow hidden -->
+                            <div>
                                 <img src="tiyeninew/PHONE DISPLAY new.png" 
                                     alt="phone" class="phone tw-w-full tw-max-w-[500px] tw-object-contain tw-rounded-[40px]">
                             </div>
-                            <div class="tw-absolute tw-bottom-50 tw-max-h-[350px] tw-overflow-hidden">
-                                    <div class="swiper-wrapper tw-w-full tw-max-h-[650px]  tw-relative"
-                                                id="slideshow" >      
+                            <!-- Ensure Slideshow is properly placed -->
+                            <div class="tw-absolute tw-bottom-10 tw-max-h-[350px]">
+                                <div class="swiper-wrapper tw-w-full tw-max-h-[650px] tw-relative" id="slideshow">
+                                    <!-- Slideshow content -->
                                 </div>
                             </div>
                         </div>
-                    </div> 
+                    </div>
+                    
 
             </div>
         </section>
@@ -163,63 +166,72 @@
         >
         <div></div>
             <h2 class="reveal-up tw-text-3xl max-md:tw-text-xl">
-                Trusted by brands you know
+                Why Choose Tiyeni?
             </h2>
 
             <div class="reveal-up carousel-container">
-                <div
-                    class="carousel lg:w-place-content-center tw-mt-6 tw-flex tw-w-full tw-gap-5 max-md:tw-gap-2"
-                >
-                    <!-- add the brands using your app  -->
-                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
-                        <img
-                            src="./assets/images/brand-logos/google.svg"
-                            alt="Google"
-                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
-                            srcset=""
-                        />
+                <!-- Include Font Awesome for icons -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+            <div class="carousel-wrapper">
+                <div class="carousel lg:w-place-content-center tw-mt-6 tw-flex tw-w-full tw-justify-between tw-flex-wrap">
+                    <!-- Carousel Items -->
+                    <div class="carousel-img tw-flex tw-items-center tw-justify-center tw-h-[30px] tw-flex-grow tw-basis-1/6 
+                                tw-text-2xl tw-text-gray-700">
+                        <i class="fas fa-thumbs-up"></i> Convenient
                     </div>
-                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
-                        <img
-                            src="./assets/images/brand-logos/microsoft.svg"
-                            alt="Microsoft"
-                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
-                            srcset=""
-                        />
+                    <div class="carousel-img tw-flex tw-items-center tw-justify-center tw-h-[30px] tw-flex-grow tw-basis-1/6 
+                                tw-text-2xl tw-text-gray-700">
+                        <i class="fas fa-check-circle"></i> Reliable
                     </div>
-                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
-                        <img
-                            src="./assets/images/brand-logos/adobe.svg"
-                            alt="Adobe"
-                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
-                            srcset=""
-                        />
+                    <div class="carousel-img tw-flex tw-items-center tw-justify-center tw-h-[30px] tw-flex-grow tw-basis-1/6 
+                                tw-text-2xl tw-text-gray-700">
+                        <i class="fas fa-bolt"></i> Quick
                     </div>
-                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
-                        <img
-                            src="./assets/images/brand-logos/airbnb.svg"
-                            alt="Adobe"
-                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
-                            srcset=""
-                        />
+                    <div class="carousel-img tw-flex tw-items-center tw-justify-center tw-h-[30px] tw-flex-grow tw-basis-1/6 
+                                tw-text-2xl tw-text-gray-700">
+                        <i class="fas fa-shield-alt"></i> Safe
                     </div>
-                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
-                        <img
-                            src="./assets/images/brand-logos/stripe.svg"
-                            alt="Adobe"
-                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
-                            srcset=""
-                        />
+                    <div class="carousel-img tw-flex tw-items-center tw-justify-center tw-h-[30px] tw-flex-grow tw-basis-1/6 
+                                tw-text-2xl tw-text-gray-700">
+                        <i class="fas fa-wallet"></i> Cheaper
                     </div>
-                    <div class="carousel-img tw-h-[30px] tw-w-[150px]">
-                        <img
-                            src="./assets/images/brand-logos/reddit.svg"
-                            alt="Adobe"
-                            class="tw-h-full tw-w-full tw-object-contain tw-grayscale tw-transition-colors hover:tw-grayscale-0"
-                            srcset=""
-                        />
+                    <div class="carousel-img tw-flex tw-items-center tw-justify-center tw-h-[30px] tw-flex-grow tw-basis-1/6 
+                                tw-text-2xl tw-text-gray-700">
+                        <i class="fas fa-handshake"></i> Trustworthy
+                    </div>
+                
+                    <!-- Duplicate items for seamless looping -->
+                    <div class="carousel-img tw-flex tw-items-center tw-justify-center tw-h-[30px] tw-flex-grow tw-basis-1/6 
+                                tw-text-2xl tw-text-gray-700">
+                        <i class="fas fa-thumbs-up"></i> Convenient
+                    </div>
+                    <div class="carousel-img tw-flex tw-items-center tw-justify-center tw-h-[30px] tw-flex-grow tw-basis-1/6 
+                                tw-text-2xl tw-text-gray-700">
+                        <i class="fas fa-check-circle"></i> Reliable
+                    </div>
+                    <div class="carousel-img tw-flex tw-items-center tw-justify-center tw-h-[30px] tw-flex-grow tw-basis-1/6 
+                                tw-text-2xl tw-text-gray-700">
+                        <i class="fas fa-bolt"></i> Quick
+                    </div>
+                    <div class="carousel-img tw-flex tw-items-center tw-justify-center tw-h-[30px] tw-flex-grow tw-basis-1/6 
+                                tw-text-2xl tw-text-gray-700">
+                        <i class="fas fa-shield-alt"></i> Safe
+                    </div>
+                    <div class="carousel-img tw-flex tw-items-center tw-justify-center tw-h-[30px] tw-flex-grow tw-basis-1/6 
+                                tw-text-2xl tw-text-gray-700">
+                        <i class="fas fa-wallet"></i> Cheaper
+                    </div>
+                    <div class="carousel-img tw-flex tw-items-center tw-justify-center tw-h-[30px] tw-flex-grow tw-basis-1/6 
+                                tw-text-2xl tw-text-gray-700">
+                        <i class="fas fa-handshake"></i> Trustworthy
                     </div>
                 </div>
+                
+            </div>
+            
+            
+            
             </div>
         </section>
 

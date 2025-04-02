@@ -144,10 +144,15 @@ a {
 } */
 
 .phone {
-    clip-path: inset(0.03rem 1.14rem round 52px); /* Default for larger screens */
-    max-height: 100vh;
-    /* object-fit: contain; */
+    clip-path: inset(0 1rem round 52px);
+    height: auto; /* Allow dynamic height */
+    max-height: 90vh; /* Slightly reduce max height */
+    width: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    object-fit: cover; /* Prevent white gaps */
+    display: block;
 }
+
 
 .phone2 {
     clip-path: inset(0.03rem 1.1rem round 40px);
@@ -417,15 +422,23 @@ header > .collapsible-header{
 }
   
 .carousel {
-    display: inline-block;
-    animation: scroll 10s linear infinite;
+    display: flex;
+    width: max-content; /* Ensure the carousel can extend indefinitely */
+    animation: scroll 20s linear infinite;
 }
   
 .carousel-img {
     display: inline-block;
     margin: 0 20px;
+    text-decoration: dashed;
+    color: rgb(95, 94, 94);
 }
   
+.carousel-wrapper {
+    overflow: hidden; /* Hide overflow to prevent duplicate display */
+    width: 100%;
+}
+
 @keyframes scroll {
     0% {
         transform: translateX(0);
