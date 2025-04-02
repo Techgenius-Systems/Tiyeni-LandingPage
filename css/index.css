@@ -424,7 +424,7 @@ header > .collapsible-header{
 .carousel {
     display: flex;
     width: max-content; /* Ensure the carousel can extend indefinitely */
-    animation: scroll 25s linear infinite;
+    animation: scroll 30s linear infinite;
 }
   
 .carousel-img {
@@ -949,4 +949,8 @@ svg {
 /* Hover effect */
 .payment-logos i:hover {
     color: #ff2a00; /* Change color on hover */
+}
+
+.social-icons a:hover {
+    color: rgb(244, 70, 70); /* Change color to red on hover */
 }
