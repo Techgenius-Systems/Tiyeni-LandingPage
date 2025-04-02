@@ -136,6 +136,8 @@ a {
 
 .phone {
     clip-path: inset(0.03rem 1.14rem round 52px); /* Default for larger screens */
+    max-height: 100vh;
+    /* object-fit: contain; */
 }
 
 .phone2 {
@@ -143,20 +145,10 @@ a {
 }
 
 
-@media (max-width: 768px) {
-    .phone {
-        clip-path: inset(0.02rem 0.8rem round 40px); /* Adjusted for smaller screens */
-        border-radius: 40px
-    }
-
-    .phone2 {
-        clip-path: inset(0.02rem 0.7rem round 34px);
-        border-radius: 25px;
-    }
     /* Mobile Optimization */
 @media (max-width: 768px) {
     .phone {
-        clip-path: inset(0.02rem 0.8rem round 40px); /* Adjusted for smaller screens */
+        clip-path: inset(0.02rem 0.8rem 0rem round 40px); /* Adjusted for smaller screens */
         border-radius: 40px;
     }
 
@@ -166,7 +158,6 @@ a {
         width: 100%;
         height: auto;
     }
-}
 }
 
   
