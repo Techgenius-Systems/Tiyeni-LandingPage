@@ -217,7 +217,9 @@ a {
     }
 }
 
-  
+.phone3 {
+    margin-left: 40vh;
+}
 
 a {
     margin: 0 auto; /* Center the link */
