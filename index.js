@@ -314,13 +314,16 @@ function showSlides() {
     }
     // Increase index, reset if necessary
     slideIndex++;
-    if (slideIndex >= slides.length) { slideIndex = 0; }
+    if (slideIndex >= slides.length-1) { slideIndex = 0; }
     // Display the current slide
     slides[slideIndex].style.display = "block";
     
     // Change slide every 3 seconds
     setTimeout(showSlides, 3000);
 }
+
+// Start the slideshow
+showSlides();
 
 function createAsh() {
     const ash = document.createElement("div");
@@ -356,7 +359,3 @@ function createAsh() {
 
 // Increase frequency to create a denser effect
 setInterval(createAsh, 700);
-
-
-
-

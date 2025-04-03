@@ -68,6 +68,20 @@ a {
     
 }
 
+/* .fleet {
+    background-color: #df252517;
+    border-radius: 8vh;
+    border: rgb(197, 21, 21);
+    border-style:groove;
+    border-spacing: 10vh;
+} */
+
+.dis-bor {
+    border: rgb(197, 21, 21);
+    border-radius: 1vh;
+    border-style: groove;
+    border-spacing: -2vh;
+}
 
 .ad-container {
     display: flex;
@@ -75,7 +89,14 @@ a {
     align-items: center;
     text-align: center;
     padding: 10px;
-    margin-left: 4vh;
+    /* margin-left: 4vh; */
+    /* background-color: #df2c2c40; */
+    background-color: #df252517;
+    border: rgb(197, 21, 21);
+    color: rgb(0, 0, 0);
+    border-radius: 8vh;
+    border-style: groove;
+    padding: 5vh;
 }
 
 .ad-text {
