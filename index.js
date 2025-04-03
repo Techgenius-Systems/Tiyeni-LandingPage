@@ -1,6 +1,6 @@
 // initialization
 
-const RESPONSIVE_WIDTH = 1024
+const RESPONSIVE_WIDTH = 3000
 
 let headerWhiteBg = false
 let isHeaderCollapsed = window.innerWidth < RESPONSIVE_WIDTH
@@ -19,9 +19,10 @@ function onHeaderClickOutside(e) {
 
 
 function toggleHeader(close = false) {
-    if (close) {
+    if (close || !isHeaderCollapsed) {
         collapseHeaderItems.classList.remove("opacity-100");
         collapseHeaderItems.style.width = "0vw";
+        collapseHeaderItems.style.display = "none";  // Ensure it's hidden
         collapseBtn.classList.remove("bi-x", "max-lg:tw-fixed");
         collapseBtn.classList.add("bi-list");
         isHeaderCollapsed = true;
@@ -29,24 +30,16 @@ function toggleHeader(close = false) {
         return;
     }
 
-    if (isHeaderCollapsed) {
-        collapseHeaderItems.classList.remove("max-md:tw-opacity-0");
-        collapseHeaderItems.classList.add("opacity-100");
-        collapseHeaderItems.style.width = "60vw";
-        collapseBtn.classList.remove("bi-list");
-        collapseBtn.classList.add("bi-x", "max-lg:tw-fixed");
-        isHeaderCollapsed = false;
+    collapseHeaderItems.style.display = "flex";  // Make it visible before applying styles
+    collapseHeaderItems.classList.add("opacity-100");
+    collapseHeaderItems.style.width = "60vw";
+    collapseBtn.classList.remove("bi-list");
+    collapseBtn.classList.add("bi-x", "max-lg:tw-fixed");
+    isHeaderCollapsed = false;
 
-        setTimeout(() => window.addEventListener("click", onHeaderClickOutside), 1);
-    } else {
-        collapseHeaderItems.classList.remove("opacity-100");
-        collapseHeaderItems.style.width = "0vw";
-        collapseBtn.classList.remove("bi-x", "max-lg:tw-fixed");
-        collapseBtn.classList.add("bi-list");
-        isHeaderCollapsed = true;
-        window.removeEventListener("click", onHeaderClickOutside);
-    }
+    setTimeout(() => window.addEventListener("click", onHeaderClickOutside), 1);
 }
+
 
 // Close the menu when a link is clicked
 document.querySelectorAll(".header-links").forEach(link => {
