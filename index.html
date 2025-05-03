@@ -33,12 +33,16 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            if (location.hostname === "www.tiyeniapp.com") {
+              window.location.href = "https://tiyeniapp.com";
+            }
+        </script>
     </head>
     <body
         class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-white tw-text-black"
     >
-        
-        
         <section
             class="hero-section tw-mt-1 tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden "
             id="backchange"
@@ -95,12 +99,12 @@
                         </div>
                     </div>
 
-                    <div class="reveal-up tw-max-w-[750px] tw-max-h-[100vh] tw-w-full tw-flex tw-place-content-center">
+                    <div class="reveal-up tw-w-full tw-h-full tw-flex tw-place-content-center">
                         <div class="tw-relative tw-max-w-[500px] slide-in tw-flex tw-place-content-center">
                             <!-- Wrapper without overflow hidden -->
                             <div>
                                 <img src="tiyeninew/PHONE DISPLAY new.png" 
-                                    alt="phone" class="phone tw-w-full tw-max-w-[500px] tw-object-contain tw-rounded-[40px]">
+                                    alt="phone" class="phone  tw-w-[100%] tw-max-w-[350px] tw-max-h-[500px] tw-object-contain tw-rounded-[40px]">
                             </div>
                             <!-- Ensure Slideshow is properly placed -->
                             <div class="tw-absolute tw-bottom-10 tw-max-h-[350px]">
@@ -114,54 +118,58 @@
 
             </div>
         </section>
-        <header
-        class="tw-items-center tw-justify-center tw-max-w-lg:tw-px-4 tw-max-w-lg:tw-mr-auto tw-sticky tw-top-0 tw-z-20 tw-flex tw-h-[80px] tw-w-full tw-bg-opacity-0 tw-px-[5%] lg:tw-justify-between tw-pl-[5%] tw-border-2 tw-border-white"
-        id="hero-section"
-        >
-        <a class="logo-container" href="">
-            <img src="Tiyeni/logonewtrans.png" alt="logo" class="logo-img" />
-            <!-- <img
-                src="Tiyeni/WhatsApp Image 2025-02-02 at 16.55.45 (1).jpeg"
-                src="Tiyeni/WhatsApp Image 2025-02-02 at 16.55.44 (1).png"
-                alt="logo"
-                class="tw-object tw-h-full tw-w-full"
-            /> -->
-        </a>
-        <div
-            class="collapsible-header animated-collapse max-lg:tw-shadow-md"
-            id="collapsed-header-items"
-        >
-            <div
-                class="tw-text-lg tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center "
-            >
-                <a class="header-links" href="#target-section"> About us </a>
-                <a class="header-links" href="#pricing"> Pricing </a>
-                <a class="header-links" href="https://www.techgeniusmw.com/services.html" target="_blank"> Solutions </a>
-                <a class="header-links" href="#backchange"> Features </a>
-                <a class="header-links" href="https://www.techgeniusmw.com/" target="_blank"> Company </a>
+        <header class="header-container flex items-center justify-between">
+            <!-- Left: Main Logo (desktop only) -->
+            <div class="hidden lg:flex items-center">
+              <a href="#backchange">
+                <img src="Tiyeni/logonewtrans.png" alt="logo" class="logo-img object-contain" />
+              </a>
             </div>
-            <div class="download-btn-container tw-w-[200px] tw-h-[50px]" id="download-btn2">
-                <a class="logo-container" href="">
-                    <img src="Tiyeni/logonewtrans.png" alt="logo" class="logo-img" />
-                    <!-- <img
-                        src="Tiyeni/WhatsApp Image 2025-02-02 at 16.55.45 (1).jpeg"
-                        src="Tiyeni/WhatsApp Image 2025-02-02 at 16.55.44 (1).png"
-                        alt="logo"
-                        class="tw-object tw-h-full tw-w-full"
-                    /> -->
-                </a>
+        
+            <!-- Center: Menu (desktop) -->
+            <nav class="hidden lg:flex gap-6 text-white font-medium">
+              <a class="header-links" href="#target-section" class="header-links">About us</a>
+              <a class="header-links" href="https://www.techgeniusmw.com/services.html" class="header-links" target="_blank">Solutions</a>
+              <a class="header-links" href="#backchange2" class="header-links">Features</a>
+              <a class="header-links" href="https://www.techgeniusmw.com/" class="header-links" target="_blank">Company</a>
+              <a class="header-links" href="#join" class="header-links">Join Us</a>
+            </nav>
+        
+            <!-- Right: Second Logo (desktop only) -->
+            <div class="hidden lg:flex items-center">
+              <a href="https://www.techgeniusmw.com/" target="_blank">
+                <img src="tiyeninew/techlogo.png" alt="logo" class="logo-img2" />
+              </a>
             </div>
-                          
         
+            <!-- Mobile: Center logo -->
+            <div href="#backchange" class="lg:hidden absolute left-1/2 transform -translate-x-1/2">
+              <img src="Tiyeni/logonewtrans.png" alt="Mobile Logo" class="logo-img" />
+            </div>
         
-        </div>
-        <button
-            class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden align-content-right"
-            onclick="toggleHeader()"
-            aria-label="menu"
-            id="collapse-btn"
-        ></button>
-    </header>
+            <!-- Mobile: Burger Button -->
+            <div class="lg:hidden ml-auto flex justify-end pr-4">
+                <button id="burgerBtn" class="burger">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>              
+          </header>
+        
+          <!-- Mobile Menu -->
+          <div id="mobileMenu" class="lg:hidden hidden flex-col space-y-4 text-white p-5 mt-[9vh] absolute w-full z-50">
+            <a href="#target-section" class="font-medium">About us</a>
+            <a href="#pricing" class="font-medium">Pricing</a>
+            <a href="https://www.techgeniusmw.com/services.html" target="_blank" class="font-medium">Solutions</a>
+            <a href="#backchange" class="font-medium">Features</a>
+            <a href="https://www.techgeniusmw.com/" target="_blank" class="font-medium">Company</a>
+            <!-- Centered Image -->
+            <div href="https://www.techgeniusmw.com/" target="_blank" class="flex justify-center items-center pt-4 border-t border-white mt-4">
+              <img src="tiyeninew/techlogo.png" alt="Logo" class="logo-img" />
+            </div>
+          </div>
+          
         <section
             class="tw-relative tw-flex tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-8"
         >
@@ -237,19 +245,38 @@
         </section>
 
         <section class="make-white tw-w-full tw-flex tw-flex-col tw-items-center tw-px-[3%] tw-p-4 tw-gap-[10%] max-md:tw-flex-col tw-overflow-hidden tw-min-h-[30vh]" id="book">
-            <h2 class="tw-text-3xl max-md:tw-text-2xl tw-mt-7">
-                Plan your next destination
-            </h2>
-        
-            <h2 class="tw-text-3xl max-md:tw-text-2xl tw-mt-7">
-                With Us!
-            </h2>
+            
+            <!-- Make sure Font Awesome is loaded -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+            <!-- Custom Animation -->
+            <style>
+              @keyframes drive {
+                0%, 100% {
+                  transform: translateX(0);
+                }
+                50% {
+                  transform: translateX(15px);
+                }
+              }
+            
+              .tw-animate-drive {
+                animation: drive 2s ease-in-out infinite;
+              }
+            </style>
+            
+            <!-- Heading with Car Icon -->
+            <div class="tw-flex tw-items-center tw-gap-4 tw-mt-7">
+              <h2 class="tw-text-3xl max-md:tw-text-2xl">Plan Your Next Destination</h2>
+              <i class="fas fa-car tw-text-4xl tw-text-orange-500 tw-animate-drive"></i>
+            </div>
+            <h2 class="tw-text-3xl max-md:tw-text-2xl tw-mt-5">With Us!</h2>
             
             <div class="tw-flex tw-items-center tw-gap-6 max-md:tw-flex-col max-md:tw-gap-4 tw-mt-8 tw-w-full">
                 <!-- Slideshow container: shifted left with fixed size -->
                 <div class="dis-bor tw-self-start tw-w-[450px] tw-aspect-[3/3] tw-ml-2 tw-border-2 tw-border-solid tw-border-gray-300 tw-rounded-2xl">
                     <a class="tw-p-4 tw-border-4 tw-border-solid tw-border-black tw-rounded-lg tw-inline-block tw-w-full tw-h-full hover:tw-border-red-400">
-                        <img src="tiyeninew/slideshow.jpeg" alt="Slide 1" class="slide tw-w-full tw-h-full tw-object-contain tw-border-2 tw-border-solid tw-border-gray-100 tw-rounded-md">
+                        <img src="Tiyeni/WE-BANNERS.png" alt="Slide 1" class="slide tw-w-[450px] tw-h-auto tw-object-contain tw-border-2 tw-border-solid tw-border-gray-100 tw-rounded-md">
                         <img src="tiyeninew/slideshow2.jpeg" alt="Slide 2" class="slide tw-w-full tw-h-full tw-object-contain tw-border-2 tw-border-solid tw-border-gray-100 tw-rounded-md" style="display: none;">
                         <img src="tiyeninew/slideshow.jpeg" alt="Slide 3" class="slide tw-w-full tw-h-full tw-object-contain tw-border-2 tw-border-solid tw-border-gray-100 tw-rounded-md" style="display: none;">
                     </a>
@@ -410,7 +437,7 @@
         <section class="tw-w-full tw-flex 
                     tw-flex-col
                     tw-place-content-center 
-                    tw-px-[10%]
+                    tw-px-[5%]
                     tw-p-4
                     tw-gap-[10%]
                     tw-place-items-center
@@ -418,30 +445,23 @@
                     tw-overflow-hidden
                     tw-min-h-[30vh]
                     "
-                    id="book"
+                    id="join"
                     >
 
             <h2 class="tw-text-3xl max-md:tw-text-2xl tw-mt-7">
-                Plan your next desitnation
+                Become a driver at Tiyeni today or add your fleet as a company. 
             </h2>
 
             <h2 class="tw-text-3xl max-md:tw-text-2xl tw-mt-7">
-                With Us!
+                 Join now and start your journey!
             </h2>
             <div class="tw-flex tw-items-center tw-gap-6 max-md:tw-flex-col max-md:tw-gap-4 tw-mt-8">
                 <div>
-                    <a class="tw-p-4 tw-border-4 tw-border-solid tw-border-black tw-rounded-lg tw-inline-block">
-                        <img src="assets/images/home/hiking4.jpg" class="tw-rounded-lg tw-block tw-w-full tw-h-auto">
-                    </a>
+                        <img src="Tiyeni/WEB BANNER 1 copy.png" class="driver">
                 </div>
                 <div class="fleet tw-flex tw-flex-col tw-items-center tw-gap-6">
-                    
-                    <!-- Common text above the store badges -->
                     <div class="tw-text-lg tw-font-semibold tw-text-center tw-mb-4 tw-max-w-[50%] max-md:tw-w-full">
-                        Become a driver at Tiyeni today or add your fleet as a company. Join now and start your journey!<br>
-                    </div>
-                    <div class="tw-text-lg tw-font-semibold tw-text-center tw-mb-4 tw-max-w-[50%] max-md:tw-w-full">
-                        Join Tiyeni as a driver! Simply:
+                        To Join Tiyeni! Simply:
                     </div>
                     <div class="tw-text-center tw-mb-4 tw-max-w-[50%] max-md:tw-w-full">
                         <!-- Join Tiyeni as a driver! Simply:<br> -->
@@ -490,7 +510,7 @@
         </section>
 
         <section
-            class="tw-mt-5 tw-flex tw-min-h-[80vh] tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-p-[2%] max-lg:tw-p-3"
+            class="read tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-p-[1%] max-lg:tw-p-3"
             id="target-section"    
             >
             <h3
@@ -552,9 +572,9 @@
                     id="article3"
                     class="tw-cursor-pointer tw-border-[1px] tw-border-black tw-flex tw-h-[400px] tw-w-[400px] tw-flex-col tw-gap-4 tw-overflow-clip tw-rounded-lg tw-p-4 max-lg:tw-w-[300px]"
                 >
-                    <div class="tw-h-[250px] tw-w-full tw-overflow-hidden tw-rounded-md">
+                    <div class="tw-h-[210px] tw-w-full tw-overflow-hidden tw-rounded-md">
                         <img
-                            src="Tiyeni/WhatsApp Image 2025-02-03 at 08.25.16.jpeg"
+                            src="Tiyeni/sienta-2.png"
                             alt="article image"
                             class="tw-h-full tw-w-full tw-object-cover tw-transition-transform tw-duration-[0.3s] hover:tw-scale-[1.04]">
 
@@ -571,7 +591,6 @@
                     </span>
                 </div>
             </div>
-            <!-- Article Dialogues -->
             <!-- Dialogue for Article 1 -->
             <div id="dialog1" class="article-dialog">
                 <div class="article-dialog-content">
@@ -598,7 +617,7 @@
                 <div class="article-dialog-content">
                     <span class="article-close">&times;</span>
                     <div class="article-dialog-scrollable">
-                        <h2 class="article-title">A little about the developers</h2>
+                        <h2 class="article-title">Tiyeni For You</h2>
                         <img
                             src="Tiyeni/WhatsApp Image 2025-02-03 at 08.25.17.jpeg"
                             alt="article image"
@@ -616,9 +635,9 @@
                 <div class="article-dialog-content">
                     <span class="article-close">&times;</span>
                     <div class="article-dialog-scrollable">
-                        <h2 class="article-title">From us to you</h2>
+                        <h2 class="article-title">Tiyeni Share</h2>
                         <img
-                            src="Tiyeni/WhatsApp Image 2025-02-03 at 08.25.16.jpeg"
+                            src="Tiyeni/sienta-2.png"
                             alt="article image"
                             class="article-image"
                         />
@@ -632,13 +651,51 @@
         </section>
 
         <section
-            class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%]"
+            class="faqq tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-px-[10%]"
         >
-            <h3
-                class="tw-text-4xl tw-font-medium tw-text-gray-800 max-md:tw-text-2xl"
-            >
-                Faq
+        <style>
+            @keyframes shake-question {
+              0%, 100% { transform: translateX(0); }
+              25% { transform: translateX(-1px); }
+              50% { transform: translateX(2px); }
+              75% { transform: translateX(-1px); }
+            }
+          
+            .tw-question-stack {
+              position: relative;
+              width: 40px;
+              height: 40px;
+              margin-left: 8px;
+            }
+          
+            .tw-question-stack i {
+              position: absolute;
+              color: #000;
+              animation: shake-question 1.2s ease-in-out infinite;
+              opacity: 0.9;
+            }
+          
+            .q1 { top: 0; left: 0; font-size: 1.5rem; transform: rotate(-10deg); }
+            .q2 { top: 5px; left: 10px; font-size: 1.25rem; transform: rotate(12deg); }
+            .q3 { top: 2px; left: -10px; font-size: 1.75rem; transform: rotate(4deg); }
+          </style>
+          
+          <!-- Visually centered block -->
+          <div class="ques-con tw-flex tw-justify-center tw-items-center tw-gap-2 tw-mb-6">
+            <h3 class="tw-text-4xl tw-font-medium tw-text-gray-800 max-md:tw-text-2xl">
+              FAQ
             </h3>
+          
+            <!-- Cluster of wiggling question marks, stays next to heading -->
+            <div class="ques tw-question-stack">
+              <i class="fas fa-question q1"></i>
+              <i class="fas fa-question q2"></i>
+              <i class="fas fa-question q3"></i>
+            </div>
+          </div>
+          
+
+
             <div
                 class="tw-mt-5 tw-flex tw-min-h-[300px] tw-w-full tw-max-w-[850px] tw-flex-col tw-gap-4"
             >
@@ -706,7 +763,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tw-mt-20 tw-flex tw-flex-col tw-place-items-center tw-gap-4">
+            <div class="cont tw-flex tw-flex-col tw-place-items-center tw-gap-4">
                 <div class="tw-text-3xl max-md:tw-text-2xl">
                     Still have questions?
                 </div>
@@ -726,73 +783,22 @@
             </div>
         </section>
 
-        <section
-            class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-p-[5%] tw-px-[10%] max-md:tw-px-2"
-        >
-
-            <div class="tw-bg-gray-100 tw-border-[1px] tw-border-black tw-h-[550px] tw-flex max-lg:tw-flex-col tw-max-h-[550px] tw-max-w-[80%]  max-lg:tw-max-h-fit max-lg:tw-h-full max-lg:tw-max-w-full tw-overflow-hidden tw-rounded-xl tw-w-full">
-                <!-- <img src="./assets/images/home/darkbg.png" alt="background" 
-                     class="tw-w-full tw-h-full"> -->
-
-                <!-- <div class="tw-flex tw-w-full tw-h-full max-lg:tw-place-items-center max-lg:tw-flex-col tw-place-content-center  tw-overflow-hidden"> -->
-                    
-                    <div
-                        class="tw-flex tw-flex-col tw-h-full tw-place-content-center tw-gap-3  tw-p-6 max-md:tw-max-w-full"
-                        >
-                        <div class="tw-flex tw-flex-col tw-gap-1">
-                            <h2 class="tw-text-3xl tw-text-black max-md:tw-text-xl">
-                                Sign-Up To
-                            </h2>
-                            <h2 class="tw-text-3xl tw-text-black max-md:tw-text-xl">
-                                 Our Newsletter
-                            </h2>
-                            <div class="tw-text-gray-800">Subscribe With Tiyeni Today!</div>
-                        </div>
-
-                        <div
-                            class="tw-flex tw-h-[60px] tw-place-items-center tw-gap-2 tw-py-2 tw-overflow-hidden"
-                        >
-                            <input
-                                type="email"
-                                class="input tw-h-full tw-w-full !tw-border-gray-600 tw-p-2 tw-outline-none"
-                                placeholder="email"
-                            />
-                            <a
-                                class="btn !tw-rounded-full !tw-text-gray-800 !tw-border-[1px] !tw-border-solid !tw-border-gray-800 !tw-bg-transparent tw-transition-colors tw-duration-[0.3s]"
-                                href=""
-                            >
-                                <i class="bi bi-chevron-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="tw-w-full tw-h-full tw-flex tw-justify-end tw-items-center max-lg:tw-max-w-full">
-                        <img src="./assets/images/home/phone2.png" alt="phone"
-                            class="phone3 tw-w-full tw-max-h-[90%] tw-object-contain">
-                    </div>
-
-                <!-- </div> -->
-
-                
-            </div>
-        </section>
+        
         <footer class="tw-mt-auto tw-flex tw-w-full tw-place-content-around tw-gap-3 tw-p-[5%] tw-px-[10%] tw-text-white max-md:tw-flex-col tw-items-center">
             <!-- Logo and Address Section -->
-            
             <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full">
                 <img src="Tiyeni/logo_transparent.png" alt="logo" class="tw-max-w-[120px]" />
                 <div class="tw-text-center">
                     Area 47,<br />
                     Lilongwe,<br />
                     Malawi<br /><br>
-                    
                     <a href="https://www.google.com/maps/place/Area+47,+Lilongwe,+Malawi/" 
                        target="_blank" 
                        rel="noopener noreferrer" 
                        class="tw-text-blue-600 hover:tw-text-blue-800 tw-inline-flex tw-items-center"
                        style="display: inline-flex; align-items: center; gap: 6px; border-bottom: 1.5px solid currentColor;">
-                        Open on Map 
-                        <i class="fas fa-map-marker-alt"></i> <!-- Font Awesome Icon -->
+                        Show on Map 
+                        <i class="fas fa-map-marker-alt"></i>
                     </a>
                 </div>                                                       
                 <div class="tw-mt-1 tw-text-lg tw-font-semibold">Follow us</div>
@@ -803,21 +809,18 @@
                        aria-label="Facebook">
                         <i class="bi bi-facebook"></i>
                     </a>
-                    
                     <a href="https://www.linkedin.com/company/tiyeni-corp/" 
                        target="_blank" 
                        rel="noopener noreferrer" 
                        aria-label="LinkedIn">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
-                    
                     <a href="https://instagram.com/" 
                        target="_blank" 
                        rel="noopener noreferrer" 
                        aria-label="Twitter">
                         <i class="bi bi-twitter-x"></i>
                     </a>              
-                    
                     <a href="https://www.instagram.com/tiyeni.mw/" 
                        target="_blank" 
                        rel="noopener noreferrer" 
@@ -825,33 +828,78 @@
                         <i class="bi bi-instagram"></i>
                     </a>
                 </div>                
-                
             </div>
         
             <!-- Company Section -->
             <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4 tw-items-center">
                 <h2 class="tw-text-3xl max-md:tw-text-xl tw-text-center">Company</h2>
                 <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm tw-text-center">
+                    <a href="#" class="footer-link">Tiyeni</a>
+                    <a href="https://www.techgeniusmw.com/about.html" class="footer-link">Techgenius Solutions</a>
                     <a href="#" class="footer-link">Use cases</a>
-                    <a href="#" class="footer-link">Integrations</a>
-                    <a href="#" class="footer-link">Change logs</a>
-                    <a href="#" class="footer-link">Blogs</a>
-                    <a href="#" class="footer-link">Contact</a>
+                    <a href="#target-section" class="footer-link">Blogs</a>
+                    <button id="contactButton2" class="footer-link">Contact</a>
                 </div>
             </div>
-        
+
+            <div id="contactDialog2" class="dialog">
+                <div class="dialog-content2">
+                    <span id="closeDialog2" class="close">&times;</span>
+                    <h2 class="tw-text-2xl tw-font-bold tw-mb-4">Contact Information</h2>
+                    <p class="tw-text-lg tw-mb-2">📧 Email: <a href="mailto:example@example.com" class="tw-text-blue-500 hover:tw-underline">example@example.com</a></p>
+                    <p class="tw-text-lg">📞 Phone: <a href="tel:+1234567890" class="tw-text-blue-500 hover:tw-underline">+123 456 7890</a></p>
+                </div>
+            </div>
+
             <!-- Resources Section -->
             <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4 tw-items-center">
-                <h2 class="tw-text-3xl max-md:tw-text-xl tw-text-center">Resources</h2>
+                <h2 class="tw-text-3xl max-md:tw-text-xl tw-text-center">Cab Offerings</h2>
                 <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm tw-text-center">
-                    <a href="#" class="footer-link">About us</a>
-                    <a href="#" class="footer-link">FAQ</a>
-                    <a href="#" class="footer-link">Contact Us</a>
-                    <a href="#" class="footer-link">Blogs</a>
-                    <a href="#" class="footer-link">Privacy policy</a>
+                    <a class="footer-link">Economy</a>
+                    <a class="footer-link">Sedan</a>
+                    <a class="footer-link">SUV Us</a>
+                    <a class="footer-link">Tiyeni Share</a>
+                    <a class="footer-link">Tiyeni Business</a>
                 </div>
             </div>
+
+            <!-- Newsletter Section -->
+            <div class="news tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4 tw-items-center max-md:tw-w-full">
+                <h2 class="tw-text-3xl max-md:tw-text-xl tw-text-center">Newsletter</h2>
+                <p class="tw-text-center tw-text-sm">
+                Subscribe to our newsletter for updates.
+                </p>
+                <form class="tw-flex tw-flex-col tw-gap-2 tw-w-full" onsubmit="return false;">
+                <input type="email" placeholder="Your Email" 
+                        class="tw-w-full tw-py-2 tw-px-3 tw-rounded-md tw-border tw-border-gray-300 tw-text-black focus:tw-outline-none focus:tw-ring-2 focus:tw-ring-blue-400" />
+                          <button type="submit" class="subscribe-btn">
+                            Subscribe
+                            <span class="dot dot1"></span>
+                            <span class="dot dot2"></span>
+                            <span class="dot dot3"></span>
+                            <span class="dot dot4"></span>
+                            <span class="dot dot5"></span>
+                            <span class="dot dot6"></span>
+                            <span class="dot dot7"></span>
+                            <span class="dot dot8"></span>
+                            <span class="dot dot9"></span>
+                            <span class="dot dot10"></span>
+                            <span class="dot dot11"></span>
+                            <span class="dot dot12"></span>
+                            <span class="dot dot13"></span>
+                            <span class="dot dot14"></span>
+                            <span class="dot dot15"></span>
+                            <span class="dot dot16"></span>
+                            <span class="dot dot17"></span>
+                            <span class="dot dot18"></span>
+                            <span class="dot dot19"></span>
+                            <span class="dot dot20"></span>
+                          </button>    
+                </form>
+            </div>
+  
         </footer>
+        
         
     </body>
 

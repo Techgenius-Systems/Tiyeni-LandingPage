@@ -1,64 +1,32 @@
-// initialization
+const burgerBtn = document.getElementById('burgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileLinks = mobileMenu.querySelectorAll('a');
 
-const RESPONSIVE_WIDTH = 3000
-
-let headerWhiteBg = false
-let isHeaderCollapsed = window.innerWidth < RESPONSIVE_WIDTH
-const collapseBtn = document.getElementById("collapse-btn")
-const collapseHeaderItems = document.getElementById("collapsed-header-items")
-
-
-
-function onHeaderClickOutside(e) {
-
-    if (!collapseHeaderItems.contains(e.target)) {
-        toggleHeader()
-    }
-
+function toggleMenu() {
+  mobileMenu.classList.toggle('hidden');
+  burgerBtn.classList.toggle('open');
 }
 
-
-function toggleHeader(close = false) {
-    if (close || !isHeaderCollapsed) {
-        collapseHeaderItems.classList.remove("opacity-100");
-        collapseHeaderItems.style.width = "0vw";
-        collapseHeaderItems.style.display = "none";  // Ensure it's hidden
-        collapseBtn.classList.remove("bi-x", "max-lg:tw-fixed");
-        collapseBtn.classList.add("bi-list");
-        isHeaderCollapsed = true;
-        window.removeEventListener("click", onHeaderClickOutside);
-        return;
-    }
-
-    collapseHeaderItems.style.display = "flex";  // Make it visible before applying styles
-    collapseHeaderItems.classList.add("opacity-100");
-    collapseHeaderItems.style.width = "60vw";
-    collapseBtn.classList.remove("bi-list");
-    collapseBtn.classList.add("bi-x", "max-lg:tw-fixed");
-    isHeaderCollapsed = false;
-
-    setTimeout(() => window.addEventListener("click", onHeaderClickOutside), 1);
-}
-
-
-// Close the menu when a link is clicked
-document.querySelectorAll(".header-links").forEach(link => {
-    link.addEventListener("click", () => toggleHeader(true));
+burgerBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  toggleMenu();
 });
 
+mobileLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    burgerBtn.classList.remove('open');
+  });
+});
 
-function responsive() {
-    if (window.innerWidth > RESPONSIVE_WIDTH) {
-        collapseHeaderItems.style.width = ""
-
-    } else {
-        isHeaderCollapsed = true
-    }
-}
-
-window.addEventListener("resize", responsive)
-
-
+document.addEventListener('click', (e) => {
+  const isClickInside = mobileMenu.contains(e.target) || burgerBtn.contains(e.target);
+  if (!isClickInside && !mobileMenu.classList.contains('hidden')) {
+    mobileMenu.classList.add('hidden');
+    burgerBtn.classList.remove('open');
+  }
+});
+   
 /**
  * Animations
  */
@@ -241,6 +209,27 @@ window.addEventListener('click', (event) => {
     }
 });
 
+const contactButton2 = document.getElementById('contactButton2');
+const contactDialog2 = document.getElementById('contactDialog2');
+const closeDialog2 = document.getElementById('closeDialog2');
+
+// Show the dialogue when the "Contact" button is clicked
+contactButton2.addEventListener('click', () => {
+    contactDialog2.style.display = 'flex';
+});
+
+// Hide the dialogue when the close button is clicked
+closeDialog2.addEventListener('click', () => {
+    contactDialog2.style.display = 'none';
+});
+
+// Hide the dialogue when clicking outside of it
+window.addEventListener('click', (event) => {
+    if (event.target === contactDialog2) {
+        contactDialog2.style.display = 'none';
+    }
+});
+
 // Get references to article cards and dialogues
 const article1 = document.getElementById('article1');
 const article2 = document.getElementById('article2');
@@ -352,3 +341,28 @@ function createAsh() {
 
 // Increase frequency to create a denser effect
 setInterval(createAsh, 700);
+
+
+
+  const openBtn = document.getElementById('openContactDialog');
+  const dialog = document.getElementById('contactDialog');
+  const closeBtn = document.getElementById('closeDialog');
+
+  // Open dialog on link click
+  openBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    dialog.classList.remove('hidden');
+  });
+
+  // Close dialog on '×' click
+  closeBtn.addEventListener('click', function () {
+    dialog.classList.add('hidden');
+  });
+
+  // Optional: Close if clicking outside dialog content
+  dialog.addEventListener('click', function (e) {
+    if (e.target === dialog) {
+      dialog.classList.add('hidden');
+    }
+  });
+
