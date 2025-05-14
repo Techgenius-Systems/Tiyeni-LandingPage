@@ -44,43 +44,58 @@
         class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-white tw-text-black"
     >
         <header class="header-container flex items-center justify-between">
-            <!-- Left: Main Logo (desktop only) -->
-            <div class="hidden lg:flex items-center">
-              <a href="#backchange">
-                <img src="Tiyeni/logonewtrans.png" alt="logo" class="logo-img object-contain" />
-              </a>
-            </div>
-        
-            <!-- Center: Menu (desktop) -->
-            <nav class="hidden lg:flex gap-6 text-white font-medium">
-              <a class="header-links" href="#target-section" class="header-links">About us</a>
-              <a class="header-links" href="https://www.techgeniusmw.com/services.html" class="header-links" target="_blank">Solutions</a>
-              <a class="header-links" href="#backchange2" class="header-links">Features</a>
-              <a class="header-links" href="https://www.techgeniusmw.com/" class="header-links" target="_blank">Company</a>
-              <a class="header-links" href="#join" class="header-links">Join Us</a>
-            </nav>
-        
-            <!-- Right: Second Logo (desktop only) -->
-            <div class="hidden lg:flex items-center">
-              <a href="https://www.techgeniusmw.com/" target="_blank">
-                <img src="tiyeninew/techlogo.png" alt="logo" class="logo-img2" />
-              </a>
-            </div>
-        
-            <!-- Mobile: Center logo -->
-            <div href="#backchange" class="lg:hidden absolute left-1/2 transform -translate-x-1/2">
-              <img src="Tiyeni/logonewtrans.png" alt="Mobile Logo" class="logo-img" />
-            </div>
-        
-            <!-- Mobile: Burger Button -->
-            <div class="lg:hidden ml-auto flex justify-end pr-4">
-                <button id="burgerBtn" class="burger">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </button>
-              </div>              
-          </header>
+  <!-- Left: Main Logo (desktop only) -->
+  <div class="hidden lg:flex items-center">
+    <a href="javascript:void(0)" onclick="scrollToBackchange()">
+      <img src="Tiyeni/logonewtrans.png" alt="logo" class="logo-img object-contain" />
+    </a>
+  </div>
+
+  <!-- Center: Menu (desktop) -->
+  <nav class="hidden lg:flex gap-6 text-white font-medium">
+    <a class="header-links" href="javascript:void(0)" onclick="scrollToTarget()">About us</a>
+    <a class="header-links" href="https://www.techgeniusmw.com/services.html" target="_blank">Solutions</a>
+    <a class="header-links" href="javascript:void(0)" onclick="scrollToBackchange2()">Features</a>
+    <a class="header-links" href="https://www.techgeniusmw.com/" target="_blank">Company</a>
+    <a class="header-links" href="javascript:void(0)" onclick="scrollToJoin()">Join Us</a>
+  </nav>
+
+  <!-- Right: Second Logo (desktop only) -->
+  <div class="hidden lg:flex items-center">
+    <a href="https://www.techgeniusmw.com/" target="_blank">
+      <img src="tiyeninew/techlogo.png" alt="logo" class="logo-img2" />
+    </a>
+  </div>
+
+  <!-- Mobile: Center logo -->
+  <div class="lg:hidden absolute left-1/2 transform -translate-x-1/2">
+    <a href="javascript:void(0)" onclick="scrollToBackchange()">
+      <img src="Tiyeni/logonewtrans.png" alt="Mobile Logo" class="logo-img" />
+    </a>
+  </div>
+
+  <!-- Mobile: Burger Button -->
+  <div class="lg:hidden ml-auto flex justify-end pr-4">
+    <button id="burgerBtn" class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="lg:hidden hidden flex-col space-y-4 text-white p-5 mt-[9vh] absolute w-full z-50">
+  <a href="javascript:void(0)" onclick="scrollToTarget()" class="font-medium">About us</a>
+  <a href="javascript:void(0)" onclick="scrollToPricing()" class="font-medium">Pricing</a>
+  <a href="https://www.techgeniusmw.com/services.html" target="_blank" class="font-medium">Solutions</a>
+  <a href="javascript:void(0)" onclick="scrollToBackchange2()" class="font-medium">Features</a>
+  <a href="https://www.techgeniusmw.com/" target="_blank" class="font-medium">Company</a>
+  <div class="flex justify-center items-center pt-4 border-t border-white mt-4">
+    <img src="tiyeninew/techlogo.png" alt="Logo" class="logo-img" />
+  </div>
+</div>
+
           <section class="pnp-body tw-w-full tw-px-[10%] tw-py-8 tw-text-gray-800">
                 <h1 class="tw-text-4xl tw-font-semibold tw-mb-4">Terms and Conditions for Tiyeni</h1>
                 <p class="tw-mb-2">Last Updated: April 2025</p>

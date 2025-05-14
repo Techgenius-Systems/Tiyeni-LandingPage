@@ -366,3 +366,22 @@ setInterval(createAsh, 700);
     }
   });
 
+function scrollToBackchange() {
+    document.getElementById("backchange")?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function scrollToTarget() {
+    document.getElementById("target-section")?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function scrollToBackchange2() {
+    document.getElementById("backchange2")?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function scrollToJoin() {
+    document.getElementById("join")?.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function scrollToPricing() {
+    document.getElementById("pricing")?.scrollIntoView({ behavior: 'smooth' });
+  }
