@@ -1218,3 +1218,19 @@ footer{
         margin-top: 5vh;
     }
 }
+.pnp-body {
+  margin: 0;
+  font-family: sans-serif;
+  padding-bottom: 8%;
+  padding-top: 10%; /* Default for desktop */
+  background-color: #ffffff;
+  color: #222222;
+  line-height: 1.6;
+}
+
+/* ✅ More padding on mobile */
+@media (max-width: 768px) {
+  .pnp-body {
+    padding-top: 23%;
+  }
+}
