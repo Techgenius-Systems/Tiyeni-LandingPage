@@ -1222,7 +1222,7 @@ footer{
   margin: 0;
   font-family: sans-serif;
   padding-bottom: 8%;
-  padding-top: 10%; /* Default for desktop */
+  padding-top: 7%; /* Default for desktop */
   background-color: #ffffff;
   color: #222222;
   line-height: 1.6;
